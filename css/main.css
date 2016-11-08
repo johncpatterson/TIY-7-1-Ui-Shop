@@ -1,0 +1,17 @@
+.nav-container {
+  background-color: #F1F1F1;
+  height: 75px; }
+  .nav-container .nav-links {
+    text-align: right; }
+    .nav-container .nav-links ul {
+      display: inline-block; }
+    .nav-container .nav-links li {
+      display: inline-block; }
+
+footer {
+  background-color: black;
+  height: 150px;
+  color: white; }
+  footer .copyright-info {
+    text-align: center;
+    padding-top: 9%; }

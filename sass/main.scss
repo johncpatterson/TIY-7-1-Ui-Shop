@@ -1,0 +1,53 @@
+// @import 'nav';
+// @import 'footer';
+// nav
+.nav-container {
+	background-color: #F1F1F1;
+	height: 75px;
+   .nav-links {
+      text-align: right;
+      ul {
+         display: inline-block;
+      }
+      li {
+         display: inline-block;
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer 
+footer {
+	background-color: black;
+	height: 150px;
+	color: white;
+	.copyright-info {
+		text-align: center;
+		padding-top: 9%;
+	}
+
+}
