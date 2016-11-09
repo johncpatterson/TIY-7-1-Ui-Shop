@@ -6,7 +6,8 @@
     font-family: 'Oswald', sans-serif;
     font-size: 17px;
     padding-top: 10px;
-    padding-left: 12px; }
+    padding-left: 12px;
+    color: #2A8CEF; }
     .nav-container .weather-container .city-name p {
       border-bottom: 1 px solid gray; }
   .nav-container .nav-links {
