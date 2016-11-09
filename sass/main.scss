@@ -3,15 +3,26 @@
 // nav
 .nav-container {
    background-color: #F1F1F1;
-   height: 75px;
-   padding-right: 30px;
-   padding-top: 20px;
+   height: 115px;
+   .weather-container {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      padding-top: 10px;
+      padding-left: 12px;
+      .city-name {
+         p {
+            border-bottom: 1 px solid gray;
+         }
+      }
+   }
    .nav-links {
+      float: right;
+      display: inline-block;
       text-align: right;
       font-size: 20px;
-      ul {
-         display: inline-block;
-      }
+      padding-top: 35px;
+      padding-right: 12px;
       li {
          display: inline-block;
          padding: 0 5px;
@@ -47,20 +58,19 @@
    margin-bottom: 50px;
    margin-top: 30px;
    .home-splash-image {
-      margin-top: 20px;
+      margin-top: 45px;
+      border-radius: 5px;
    }
-   .home-search {
-   	
-   }
+   .home-search {}
 }
 
 // footer 
 footer {
    background-color: black;
-   height: 150px;
+   height: 100px;
    color: white;
    .copyright-info {
       text-align: center;
-      padding-top: 9%;
+      padding-top: 9px;
    }
 }

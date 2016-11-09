@@ -3,7 +3,23 @@
 
    angular
       .module('shop', ['ui.router'])
-      .config(appConfig);
+      .directive('weather', function(storebikes) {
+         return {
+            restrict: 'E',
+            templateUrl: "partials/getweather.html",
+            link: function(vm, element, attrs) {
+
+               let weather = storebikes.getWeather(attrs.city);
+
+               weather.then(function(weatherData) {
+                  vm.weather = weatherData.data;
+               });
+
+            }
+         };
+      })
+
+   .config(appConfig);
 
    appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
@@ -25,13 +41,13 @@
                }
             }
          })
-      	.state('productCategories', {
+         .state('productCategories', {
             url: '/productCategories',
             views: {
                'content': {
                   templateUrl: 'partials/productcategories.html',
-                  controller: 'CategoryController',
-                  controllerAs: 'controller'
+                  // controller: 'CategoryController',
+                  // controllerAs: 'controller'
                },
                'sidebar': {
                   templateUrl: 'partials/nav.html',
@@ -43,17 +59,17 @@
             views: {
                'content': {
                   templateUrl: 'partials/productdetail.html',
-                  controller: 'ItemController',
-                  controllerAs: 'controller'
+                  // controller: 'ItemController',
+                  // controllerAs: 'controller'
                },
                'sidebar': {
                   templateUrl: 'partials/nav.html',
                }
             }
          })
-	      .state('404', {
-	         url: '/404',
-	         templateUrl: 'partials/404error.html',
-	      })
-   	}
+         .state('404', {
+            url: '/404',
+            templateUrl: 'partials/404error.html',
+         })
+   }
 })();
